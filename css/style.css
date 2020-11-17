@@ -30,7 +30,8 @@ main{
   margin: 20px 0;
   background: #48675D;
   text-align: center;
-  height: 50vh;
+  /* height: 50vh; */
+  padding: 20px 0;
 }
 
 #button{
@@ -43,6 +44,31 @@ main{
   cursor: pointer;
   background-color: #79C8DE;
   color: white;
+}
+
+#elenco{
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#elenco li{
+  list-style: none;
+  height: 40px;
+  width: 70px;
+  background: grey;
+  margin: 10px;
+  line-height: 40px;
+  border-radius: 5px;
+}
+#elenco li.orange{
+  background: orange;
+}
+#elenco li.blue{
+  background: blue;
+}
+#elenco li.red{
+  background: red;
 }
 
 .hidden{

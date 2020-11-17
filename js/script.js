@@ -15,7 +15,20 @@ function(){
     } else if(i % 5 == 0){
       numero = "Buzz";
     }
+
+    if(numero == "Fizz"){
+      document.getElementById("elenco").innerHTML += '<li class="flex orange">' + numero + '</li>';
+    } else if(numero == "Buzz"){
+      document.getElementById("elenco").innerHTML += '<li class="flex blue">' + numero + '</li>';
+    } else if(numero == "FizzBuzz"){
+      document.getElementById("elenco").innerHTML += '<li class="flex red">' + numero + '</li>';
+    } else{
+      document.getElementById("elenco").innerHTML += '<li class="flex">' + numero + '</li>';
+    }
+
     console.log(numero);
   }
+
+
 }
 );
