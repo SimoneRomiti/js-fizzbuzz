@@ -6,10 +6,12 @@
 
 body{
   background: #2F4649;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .container{
-  width: 75vw;
+  width: 90vw;
   margin: auto;
 }
 
@@ -17,30 +19,35 @@ header{
   background: #65857F;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px;
 }
 
 .bottone{
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 main{
-  margin: 20px 0;
+  margin: 15px 0;
   background: #48675D;
   text-align: center;
-  /* height: 50vh; */
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
-#button{
+.my-btn, .my-btn-V2{
   background: white;
-  padding: 10px;
+  padding: 10px 0;
+  width: 80px;
   border: 1px solid #79C8DE;
   border-radius: 5px;
+  margin: 0 10px;
 }
-#button:hover{
+.my-btn-V2{
+  opacity: 0.5;
+  color: grey;
+}
+.my-btn:hover{
   cursor: pointer;
   background-color: #79C8DE;
   color: white;
@@ -50,8 +57,9 @@ main{
   color: white;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
+
 #elenco li{
   list-style: none;
   height: 40px;
@@ -71,9 +79,35 @@ main{
   background: red;
 }
 
-.hidden{
+.hide{
   opacity: 0;
 }
+.hidden{
+  opacity: 0;
+  animation-name: animazione-reverse;
+  animation-duration: 1s;
+}
+
+@keyframes animazione-reverse {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
 .show{
   opacity: 1;
+  animation-name: animazione;
+  animation-duration: 1s;
+}
+
+@keyframes animazione {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
